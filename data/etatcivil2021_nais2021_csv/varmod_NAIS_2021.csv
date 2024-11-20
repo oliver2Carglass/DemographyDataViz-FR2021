@@ -1,0 +1,611 @@
+COD_VAR;LIB_VAR;COD_MOD;LIB_MOD;TYPE_VAR;LONG_VAR
+ANAIS;Année de naissance de l'enfant;2021;Fichier naissances de 2021;CHAR;4
+ACCOUCHR;Conditions de l’accouchement;;Jugement déclaratif de naissance;CHAR;2
+ACCOUCHR;Conditions de l’accouchement;ES;Dans un établissement spécialisé;CHAR;2
+ACCOUCHR;Conditions de l’accouchement;AU;Autre;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;17;17 ans ou moins;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;18;18 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;19;19 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;20;20 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;21;21 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;22;22 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;23;23 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;24;24 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;25;25 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;26;26 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;27;27 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;28;28 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;29;29 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;30;30 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;31;31 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;32;32 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;33;33 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;34;34 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;35;35 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;36;36 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;37;37 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;38;38 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;39;39 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;40;40 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;41;41 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;42;42 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;43;43 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;44;44 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;45;45 ans;CHAR;2
+AGEMERE;Age de la mère dans l’année de naissance de l’enfant;46;46 ans ou plus;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;17;17 ans ou moins;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;18;18 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;19;19 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;20;20 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;21;21 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;22;22 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;23;23 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;24;24 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;25;25 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;26;26 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;27;27 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;28;28 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;29;29 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;30;30 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;31;31 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;32;32 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;33;33 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;34;34 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;35;35 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;36;36 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;37;37 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;38;38 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;39;39 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;40;40 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;41;41 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;42;42 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;43;43 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;44;44 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;45;45 ans;CHAR;2
+AGEPERE;Age du père dans l’année de naissance de l’enfant;46;46 ans ou plus;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;17;17 ans ou moins;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;18;18 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;19;19 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;20;20 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;21;21 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;22;22 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;23;23 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;24;24 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;25;25 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;26;26 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;27;27 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;28;28 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;29;29 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;30;30 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;31;31 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;32;32 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;33;33 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;34;34 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;35;35 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;36;36 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;37;37 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;38;38 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;39;39 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;40;40 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;41;41 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;42;42 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;43;43 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;44;44 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;45;45 ans;CHAR;2
+AGEXACTM;Age exact de la mère à la naissance de l’enfant;46;46 ans ou plus;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;17;17 ans ou moins;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;18;18 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;19;19 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;20;20 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;21;21 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;22;22 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;23;23 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;24;24 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;25;25 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;26;26 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;27;27 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;28;28 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;29;29 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;30;30 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;31;31 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;32;32 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;33;33 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;34;34 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;35;35 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;36;36 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;37;37 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;38;38 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;39;39 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;40;40 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;41;41 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;42;42 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;43;43 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;44;44 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;45;45 ans;CHAR;2
+AGEXACTP;Age exact du père à la naissance de l’enfant;46;46 ans ou plus;CHAR;2
+AMAR;Année de mariage des parents;0000;Enfant né hors mariage ou jugement déclaratif de naissance;CHAR;4
+AMAR;Année de mariage des parents;1983;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1987;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1988;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1989;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1990;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1991;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1992;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1993;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1994;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1995;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1996;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1997;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1998;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;1999;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2000;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2001;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2002;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2003;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2004;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2005;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2006;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2007;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2008;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2009;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2010;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2011;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2012;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2013;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2014;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2015;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2016;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2017;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2018;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2019;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2020;Année de mariage des parents;CHAR;4
+AMAR;Année de mariage des parents;2021;Année de mariage des parents;CHAR;4
+ARECC;Année de reconnaissance conjointe des parents;0000;Enfant né dans le mariage ou non reconnu conjointement par ses deux parents à la naissance ou jugement déclaratif de naissance;CHAR;4
+ARECC;Année de reconnaissance conjointe des parents;2020;Année de reconnaissance conjointe;CHAR;4
+ARECC;Année de reconnaissance conjointe des parents;2021;Année de reconnaissance conjointe;CHAR;4
+ARECM;Année de reconnaissance de la mère;0000;Enfant né dans le mariage ou non reconnu par la mère ou jugement déclaratif de naissance;CHAR;4
+ARECM;Année de reconnaissance de la mère;2020;Année de reconnaissance de la mère;CHAR;4
+ARECM;Année de reconnaissance de la mère;2021;Année de reconnaissance de la mère;CHAR;4
+ARECP;Année de reconnaissance du père;0000;Enfant né dans le mariage ou non reconnu par le père ou jugement déclaratif de naissance;CHAR;4
+ARECP;Année de reconnaissance du père;2020;Année de reconnaissance du père;CHAR;4
+ARECP;Année de reconnaissance du père;2021;Année de reconnaissance du père;CHAR;4
+ARECP;Année de reconnaissance du père;2022;Année de reconnaissance du père;CHAR;4
+DEPDOM;Département de domicile de la mère;01;Ain;CHAR;3
+DEPDOM;Département de domicile de la mère;02;Aisne;CHAR;3
+DEPDOM;Département de domicile de la mère;03;Allier;CHAR;3
+DEPDOM;Département de domicile de la mère;04;Alpes-de-Haute-Provence;CHAR;3
+DEPDOM;Département de domicile de la mère;05;Hautes-Alpes;CHAR;3
+DEPDOM;Département de domicile de la mère;06;Alpes-Maritimes;CHAR;3
+DEPDOM;Département de domicile de la mère;07;Ardèche;CHAR;3
+DEPDOM;Département de domicile de la mère;08;Ardennes;CHAR;3
+DEPDOM;Département de domicile de la mère;09;Ariège;CHAR;3
+DEPDOM;Département de domicile de la mère;10;Aube;CHAR;3
+DEPDOM;Département de domicile de la mère;11;Aude;CHAR;3
+DEPDOM;Département de domicile de la mère;12;Aveyron;CHAR;3
+DEPDOM;Département de domicile de la mère;13;Bouches-du-Rhône;CHAR;3
+DEPDOM;Département de domicile de la mère;14;Calvados;CHAR;3
+DEPDOM;Département de domicile de la mère;15;Cantal;CHAR;3
+DEPDOM;Département de domicile de la mère;16;Charente;CHAR;3
+DEPDOM;Département de domicile de la mère;17;Charente-Maritime;CHAR;3
+DEPDOM;Département de domicile de la mère;18;Cher;CHAR;3
+DEPDOM;Département de domicile de la mère;19;Corrèze;CHAR;3
+DEPDOM;Département de domicile de la mère;21;Côte-d'Or;CHAR;3
+DEPDOM;Département de domicile de la mère;22;Côtes-d'Armor;CHAR;3
+DEPDOM;Département de domicile de la mère;23;Creuse;CHAR;3
+DEPDOM;Département de domicile de la mère;24;Dordogne;CHAR;3
+DEPDOM;Département de domicile de la mère;25;Doubs;CHAR;3
+DEPDOM;Département de domicile de la mère;26;Drôme;CHAR;3
+DEPDOM;Département de domicile de la mère;27;Eure;CHAR;3
+DEPDOM;Département de domicile de la mère;28;Eure-et-Loir;CHAR;3
+DEPDOM;Département de domicile de la mère;29;Finistère;CHAR;3
+DEPDOM;Département de domicile de la mère;2A;Corse-du-Sud;CHAR;3
+DEPDOM;Département de domicile de la mère;2B;Haute-Corse;CHAR;3
+DEPDOM;Département de domicile de la mère;30;Gard;CHAR;3
+DEPDOM;Département de domicile de la mère;31;Haute-Garonne;CHAR;3
+DEPDOM;Département de domicile de la mère;32;Gers;CHAR;3
+DEPDOM;Département de domicile de la mère;33;Gironde;CHAR;3
+DEPDOM;Département de domicile de la mère;34;Hérault;CHAR;3
+DEPDOM;Département de domicile de la mère;35;Ille-et-Vilaine;CHAR;3
+DEPDOM;Département de domicile de la mère;36;Indre;CHAR;3
+DEPDOM;Département de domicile de la mère;37;Indre-et-Loire;CHAR;3
+DEPDOM;Département de domicile de la mère;38;Isère;CHAR;3
+DEPDOM;Département de domicile de la mère;39;Jura;CHAR;3
+DEPDOM;Département de domicile de la mère;40;Landes;CHAR;3
+DEPDOM;Département de domicile de la mère;41;Loir-et-Cher;CHAR;3
+DEPDOM;Département de domicile de la mère;42;Loire;CHAR;3
+DEPDOM;Département de domicile de la mère;43;Haute-Loire;CHAR;3
+DEPDOM;Département de domicile de la mère;44;Loire-Atlantique;CHAR;3
+DEPDOM;Département de domicile de la mère;45;Loiret;CHAR;3
+DEPDOM;Département de domicile de la mère;46;Lot;CHAR;3
+DEPDOM;Département de domicile de la mère;47;Lot-et-Garonne;CHAR;3
+DEPDOM;Département de domicile de la mère;48;Lozère;CHAR;3
+DEPDOM;Département de domicile de la mère;49;Maine-et-Loire;CHAR;3
+DEPDOM;Département de domicile de la mère;50;Manche;CHAR;3
+DEPDOM;Département de domicile de la mère;51;Marne;CHAR;3
+DEPDOM;Département de domicile de la mère;52;Haute-Marne;CHAR;3
+DEPDOM;Département de domicile de la mère;53;Mayenne;CHAR;3
+DEPDOM;Département de domicile de la mère;54;Meurthe-et-Moselle;CHAR;3
+DEPDOM;Département de domicile de la mère;55;Meuse;CHAR;3
+DEPDOM;Département de domicile de la mère;56;Morbihan;CHAR;3
+DEPDOM;Département de domicile de la mère;57;Moselle;CHAR;3
+DEPDOM;Département de domicile de la mère;58;Nièvre;CHAR;3
+DEPDOM;Département de domicile de la mère;59;Nord;CHAR;3
+DEPDOM;Département de domicile de la mère;60;Oise;CHAR;3
+DEPDOM;Département de domicile de la mère;61;Orne;CHAR;3
+DEPDOM;Département de domicile de la mère;62;Pas-de-Calais;CHAR;3
+DEPDOM;Département de domicile de la mère;63;Puy-de-Dôme;CHAR;3
+DEPDOM;Département de domicile de la mère;64;Pyrénées-Atlantiques;CHAR;3
+DEPDOM;Département de domicile de la mère;65;Hautes-Pyrénées;CHAR;3
+DEPDOM;Département de domicile de la mère;66;Pyrénées-Orientales;CHAR;3
+DEPDOM;Département de domicile de la mère;67;Bas-Rhin;CHAR;3
+DEPDOM;Département de domicile de la mère;68;Haut-Rhin;CHAR;3
+DEPDOM;Département de domicile de la mère;69;Rhône;CHAR;3
+DEPDOM;Département de domicile de la mère;70;Haute-Saône;CHAR;3
+DEPDOM;Département de domicile de la mère;71;Saône-et-Loire;CHAR;3
+DEPDOM;Département de domicile de la mère;72;Sarthe;CHAR;3
+DEPDOM;Département de domicile de la mère;73;Savoie;CHAR;3
+DEPDOM;Département de domicile de la mère;74;Haute-Savoie;CHAR;3
+DEPDOM;Département de domicile de la mère;75;Paris;CHAR;3
+DEPDOM;Département de domicile de la mère;76;Seine-Maritime;CHAR;3
+DEPDOM;Département de domicile de la mère;77;Seine-et-Marne;CHAR;3
+DEPDOM;Département de domicile de la mère;78;Yvelines;CHAR;3
+DEPDOM;Département de domicile de la mère;79;Deux-Sèvres;CHAR;3
+DEPDOM;Département de domicile de la mère;80;Somme;CHAR;3
+DEPDOM;Département de domicile de la mère;81;Tarn;CHAR;3
+DEPDOM;Département de domicile de la mère;82;Tarn-et-Garonne;CHAR;3
+DEPDOM;Département de domicile de la mère;83;Var;CHAR;3
+DEPDOM;Département de domicile de la mère;84;Vaucluse;CHAR;3
+DEPDOM;Département de domicile de la mère;85;Vendée;CHAR;3
+DEPDOM;Département de domicile de la mère;86;Vienne;CHAR;3
+DEPDOM;Département de domicile de la mère;87;Haute-Vienne;CHAR;3
+DEPDOM;Département de domicile de la mère;88;Vosges;CHAR;3
+DEPDOM;Département de domicile de la mère;89;Yonne;CHAR;3
+DEPDOM;Département de domicile de la mère;90;Territoire de Belfort;CHAR;3
+DEPDOM;Département de domicile de la mère;91;Essonne;CHAR;3
+DEPDOM;Département de domicile de la mère;92;Hauts-de-Seine;CHAR;3
+DEPDOM;Département de domicile de la mère;93;Seine-Saint-Denis;CHAR;3
+DEPDOM;Département de domicile de la mère;94;Val-de-Marne;CHAR;3
+DEPDOM;Département de domicile de la mère;95;Val-d'Oise;CHAR;3
+DEPDOM;Département de domicile de la mère;971;Guadeloupe;CHAR;3
+DEPDOM;Département de domicile de la mère;972;Martinique;CHAR;3
+DEPDOM;Département de domicile de la mère;973;Guyane;CHAR;3
+DEPDOM;Département de domicile de la mère;974;La Réunion;CHAR;3
+DEPDOM;Département de domicile de la mère;975;Saint-Pierre-et-Miquelon;CHAR;3
+DEPDOM;Département de domicile de la mère;976;Mayotte (DOM depuis avril 2011);CHAR;3
+DEPDOM;Département de domicile de la mère;977;Saint-Barthélemy;CHAR;3
+DEPDOM;Département de domicile de la mère;978;Saint-Martin;CHAR;3
+DEPDOM;Département de domicile de la mère;986;Wallis et Futuna;CHAR;3
+DEPDOM;Département de domicile de la mère;987;Polynésie française;CHAR;3
+DEPDOM;Département de domicile de la mère;988;Nouvelle-Calédonie;CHAR;3
+DEPDOM;Département de domicile de la mère;99;Etranger;CHAR;3
+DEPNAIS;Département de naissance;01;Ain;CHAR;3
+DEPNAIS;Département de naissance;02;Aisne;CHAR;3
+DEPNAIS;Département de naissance;03;Allier;CHAR;3
+DEPNAIS;Département de naissance;04;Alpes-de-Haute-Provence;CHAR;3
+DEPNAIS;Département de naissance;05;Hautes-Alpes;CHAR;3
+DEPNAIS;Département de naissance;06;Alpes-Maritimes;CHAR;3
+DEPNAIS;Département de naissance;07;Ardèche;CHAR;3
+DEPNAIS;Département de naissance;08;Ardennes;CHAR;3
+DEPNAIS;Département de naissance;09;Ariège;CHAR;3
+DEPNAIS;Département de naissance;10;Aube;CHAR;3
+DEPNAIS;Département de naissance;11;Aude;CHAR;3
+DEPNAIS;Département de naissance;12;Aveyron;CHAR;3
+DEPNAIS;Département de naissance;13;Bouches-du-Rhône;CHAR;3
+DEPNAIS;Département de naissance;14;Calvados;CHAR;3
+DEPNAIS;Département de naissance;15;Cantal;CHAR;3
+DEPNAIS;Département de naissance;16;Charente;CHAR;3
+DEPNAIS;Département de naissance;17;Charente-Maritime;CHAR;3
+DEPNAIS;Département de naissance;18;Cher;CHAR;3
+DEPNAIS;Département de naissance;19;Corrèze;CHAR;3
+DEPNAIS;Département de naissance;21;Côte-d'Or;CHAR;3
+DEPNAIS;Département de naissance;22;Côtes-d'Armor;CHAR;3
+DEPNAIS;Département de naissance;23;Creuse;CHAR;3
+DEPNAIS;Département de naissance;24;Dordogne;CHAR;3
+DEPNAIS;Département de naissance;25;Doubs;CHAR;3
+DEPNAIS;Département de naissance;26;Drôme;CHAR;3
+DEPNAIS;Département de naissance;27;Eure;CHAR;3
+DEPNAIS;Département de naissance;28;Eure-et-Loir;CHAR;3
+DEPNAIS;Département de naissance;29;Finistère;CHAR;3
+DEPNAIS;Département de naissance;2A;Corse-du-Sud;CHAR;3
+DEPNAIS;Département de naissance;2B;Haute-Corse;CHAR;3
+DEPNAIS;Département de naissance;30;Gard;CHAR;3
+DEPNAIS;Département de naissance;31;Haute-Garonne;CHAR;3
+DEPNAIS;Département de naissance;32;Gers;CHAR;3
+DEPNAIS;Département de naissance;33;Gironde;CHAR;3
+DEPNAIS;Département de naissance;34;Hérault;CHAR;3
+DEPNAIS;Département de naissance;35;Ille-et-Vilaine;CHAR;3
+DEPNAIS;Département de naissance;36;Indre;CHAR;3
+DEPNAIS;Département de naissance;37;Indre-et-Loire;CHAR;3
+DEPNAIS;Département de naissance;38;Isère;CHAR;3
+DEPNAIS;Département de naissance;39;Jura;CHAR;3
+DEPNAIS;Département de naissance;40;Landes;CHAR;3
+DEPNAIS;Département de naissance;41;Loir-et-Cher;CHAR;3
+DEPNAIS;Département de naissance;42;Loire;CHAR;3
+DEPNAIS;Département de naissance;43;Haute-Loire;CHAR;3
+DEPNAIS;Département de naissance;44;Loire-Atlantique;CHAR;3
+DEPNAIS;Département de naissance;45;Loiret;CHAR;3
+DEPNAIS;Département de naissance;46;Lot;CHAR;3
+DEPNAIS;Département de naissance;47;Lot-et-Garonne;CHAR;3
+DEPNAIS;Département de naissance;48;Lozère;CHAR;3
+DEPNAIS;Département de naissance;49;Maine-et-Loire;CHAR;3
+DEPNAIS;Département de naissance;50;Manche;CHAR;3
+DEPNAIS;Département de naissance;51;Marne;CHAR;3
+DEPNAIS;Département de naissance;52;Haute-Marne;CHAR;3
+DEPNAIS;Département de naissance;53;Mayenne;CHAR;3
+DEPNAIS;Département de naissance;54;Meurthe-et-Moselle;CHAR;3
+DEPNAIS;Département de naissance;55;Meuse;CHAR;3
+DEPNAIS;Département de naissance;56;Morbihan;CHAR;3
+DEPNAIS;Département de naissance;57;Moselle;CHAR;3
+DEPNAIS;Département de naissance;58;Nièvre;CHAR;3
+DEPNAIS;Département de naissance;59;Nord;CHAR;3
+DEPNAIS;Département de naissance;60;Oise;CHAR;3
+DEPNAIS;Département de naissance;61;Orne;CHAR;3
+DEPNAIS;Département de naissance;62;Pas-de-Calais;CHAR;3
+DEPNAIS;Département de naissance;63;Puy-de-Dôme;CHAR;3
+DEPNAIS;Département de naissance;64;Pyrénées-Atlantiques;CHAR;3
+DEPNAIS;Département de naissance;65;Hautes-Pyrénées;CHAR;3
+DEPNAIS;Département de naissance;66;Pyrénées-Orientales;CHAR;3
+DEPNAIS;Département de naissance;67;Bas-Rhin;CHAR;3
+DEPNAIS;Département de naissance;68;Haut-Rhin;CHAR;3
+DEPNAIS;Département de naissance;69;Rhône;CHAR;3
+DEPNAIS;Département de naissance;70;Haute-Saône;CHAR;3
+DEPNAIS;Département de naissance;71;Saône-et-Loire;CHAR;3
+DEPNAIS;Département de naissance;72;Sarthe;CHAR;3
+DEPNAIS;Département de naissance;73;Savoie;CHAR;3
+DEPNAIS;Département de naissance;74;Haute-Savoie;CHAR;3
+DEPNAIS;Département de naissance;75;Paris;CHAR;3
+DEPNAIS;Département de naissance;76;Seine-Maritime;CHAR;3
+DEPNAIS;Département de naissance;77;Seine-et-Marne;CHAR;3
+DEPNAIS;Département de naissance;78;Yvelines;CHAR;3
+DEPNAIS;Département de naissance;79;Deux-Sèvres;CHAR;3
+DEPNAIS;Département de naissance;80;Somme;CHAR;3
+DEPNAIS;Département de naissance;81;Tarn;CHAR;3
+DEPNAIS;Département de naissance;82;Tarn-et-Garonne;CHAR;3
+DEPNAIS;Département de naissance;83;Var;CHAR;3
+DEPNAIS;Département de naissance;84;Vaucluse;CHAR;3
+DEPNAIS;Département de naissance;85;Vendée;CHAR;3
+DEPNAIS;Département de naissance;86;Vienne;CHAR;3
+DEPNAIS;Département de naissance;87;Haute-Vienne;CHAR;3
+DEPNAIS;Département de naissance;88;Vosges;CHAR;3
+DEPNAIS;Département de naissance;89;Yonne;CHAR;3
+DEPNAIS;Département de naissance;90;Territoire de Belfort;CHAR;3
+DEPNAIS;Département de naissance;91;Essonne;CHAR;3
+DEPNAIS;Département de naissance;92;Hauts-de-Seine;CHAR;3
+DEPNAIS;Département de naissance;93;Seine-Saint-Denis;CHAR;3
+DEPNAIS;Département de naissance;94;Val-de-Marne;CHAR;3
+DEPNAIS;Département de naissance;95;Val-d'Oise;CHAR;3
+DEPNAIS;Département de naissance;971;Guadeloupe;CHAR;3
+DEPNAIS;Département de naissance;972;Martinique;CHAR;3
+DEPNAIS;Département de naissance;973;Guyane;CHAR;3
+DEPNAIS;Département de naissance;974;La Réunion;CHAR;3
+DEPNAIS;Département de naissance;976;Mayotte (DOM depuis avril 2011);CHAR;3
+DMARNAIS;Comparaison des dates anniversaires de mariage des parents et de naissance de l’enfant anniversaires de mariage des parents et de naissance de l’enfant;;Enfant né hors mariage;CHAR;1
+DMARNAIS;Comparaison des dates anniversaires de mariage des parents et de naissance de l’enfant anniversaires de mariage des parents et de naissance de l’enfant;1;Naissance survenue avant l'anniversaire de mariage;CHAR;1
+DMARNAIS;Comparaison des dates anniversaires de mariage des parents et de naissance de l’enfant anniversaires de mariage des parents et de naissance de l’enfant;2;Naissance survenue le même jour ou après l'anniversaire de mariage;CHAR;1
+DMARNAIS;Comparaison des dates anniversaires de mariage des parents et de naissance de l’enfant anniversaires de mariage des parents et de naissance de l’enfant;9;Jugement déclaratif de naissance;CHAR;1
+DURECEVP;Durée écoulée depuis l’événement précédent;;Enfant né hors mariage ou premier né ou jugement déclaratif de naissance;CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;00;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;01;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;02;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;03;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;04;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;05;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;06;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;07;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;08;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;09;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;10;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;11;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;12;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;13;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;14;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;15;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;16;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;17;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;18;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;19;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;20;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;21;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;22;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;23;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;24;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;25;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;26;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;27;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;28;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;29;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;30;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+DURECEVP;Durée écoulée depuis l’événement précédent;32;nombre d’années écoulées (depuis le mariage ou la naissance précédente);CHAR;2
+INDLNM;Indicateur du lieu de naissance de la mère;1;Née en France métropolitaine;CHAR;1
+INDLNM;Indicateur du lieu de naissance de la mère;2;Née dans un DOM;CHAR;1
+INDLNM;Indicateur du lieu de naissance de la mère;3;Née dans un COM;CHAR;1
+INDLNM;Indicateur du lieu de naissance de la mère;4;Née à l'étranger;CHAR;1
+INDLNP;Indicateur du lieu de naissance du père;1;Né en France métropolitaine;CHAR;1
+INDLNP;Indicateur du lieu de naissance du père;2;Né dans un DOM;CHAR;1
+INDLNP;Indicateur du lieu de naissance du père;3;Né dans un COM;CHAR;1
+INDLNP;Indicateur du lieu de naissance du père;4;Né à l'étranger;CHAR;1
+INDNATM;Indicateur de nationalité de la mère;1;Française;CHAR;1
+INDNATM;Indicateur de nationalité de la mère;2;Étrangère;CHAR;1
+INDNATP;Indicateur de nationalité du père;1;Française;CHAR;1
+INDNATP;Indicateur de nationalité du père;2;Étrangère;CHAR;1
+JRECC;Jour de reconnaissance conjointe des parents;00;Enfant né dans le mariage ou non reconnu conjointement par ses deux parents à la naissance ou jugement déclaratif de naissance;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;01;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;02;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;03;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;04;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;05;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;06;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;07;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;08;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;09;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;10;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;11;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;12;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;13;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;14;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;15;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;16;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;17;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;18;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;19;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;20;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;21;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;22;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;23;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;24;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;25;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;26;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;27;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;28;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;29;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;30;Quantième du jour dans le mois;CHAR;2
+JRECC;Jour de reconnaissance conjointe des parents;31;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;00;Enfant né dans le mariage ou non reconnu par la mère ou jugement déclaratif de naissance;CHAR;2
+JRECM;Jour de reconnaissance de la mère;01;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;02;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;03;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;04;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;05;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;06;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;07;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;08;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;09;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;10;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;11;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;12;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;13;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;14;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;15;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;16;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;17;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;18;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;19;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;20;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;21;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;22;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;23;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;24;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;25;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;26;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;27;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;28;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;29;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;30;Quantième du jour dans le mois;CHAR;2
+JRECM;Jour de reconnaissance de la mère;31;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;00;Enfant né dans le mariage ou non reconnu par le père ou jugement déclaratif de naissance;CHAR;2
+JRECP;Jour de reconnaissance du père;01;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;02;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;03;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;04;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;05;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;06;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;07;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;08;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;09;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;10;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;11;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;12;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;13;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;14;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;15;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;16;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;17;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;18;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;19;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;20;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;21;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;22;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;23;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;24;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;25;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;26;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;27;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;28;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;29;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;30;Quantième du jour dans le mois;CHAR;2
+JRECP;Jour de reconnaissance du père;31;Quantième du jour dans le mois;CHAR;2
+MNAIS;Mois de naissance de l’enfant;01;Janvier;CHAR;2
+MNAIS;Mois de naissance de l’enfant;02;Février;CHAR;2
+MNAIS;Mois de naissance de l’enfant;03;Mars;CHAR;2
+MNAIS;Mois de naissance de l’enfant;04;Avril;CHAR;2
+MNAIS;Mois de naissance de l’enfant;05;Mai;CHAR;2
+MNAIS;Mois de naissance de l’enfant;06;Juin;CHAR;2
+MNAIS;Mois de naissance de l’enfant;07;Juillet;CHAR;2
+MNAIS;Mois de naissance de l’enfant;08;Août;CHAR;2
+MNAIS;Mois de naissance de l’enfant;09;Septembre;CHAR;2
+MNAIS;Mois de naissance de l’enfant;10;Octobre;CHAR;2
+MNAIS;Mois de naissance de l’enfant;11;Novembre;CHAR;2
+MNAIS;Mois de naissance de l’enfant;12;Décembre;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;00;Enfant né dans le mariage ou non reconnu conjointement par ses deux parents à la naissance ou jugement déclaratif de naissance;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;01;Janvier;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;02;Février;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;03;Mars;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;04;Avril;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;05;Mai;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;06;Juin;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;07;Juillet;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;08;Août;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;09;Septembre;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;10;Octobre;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;11;Novembre;CHAR;2
+MRECC;Mois de reconnaissance conjointe des parents;12;Décembre;CHAR;2
+MRECM;Mois de reconnaissance de la mère;00;Enfant né dans le mariage ou non reconnu par la mère ou jugement déclaratif de naissance;CHAR;2
+MRECM;Mois de reconnaissance de la mère;01;Janvier;CHAR;2
+MRECM;Mois de reconnaissance de la mère;02;Février;CHAR;2
+MRECM;Mois de reconnaissance de la mère;03;Mars;CHAR;2
+MRECM;Mois de reconnaissance de la mère;04;Avril;CHAR;2
+MRECM;Mois de reconnaissance de la mère;05;Mai;CHAR;2
+MRECM;Mois de reconnaissance de la mère;06;Juin;CHAR;2
+MRECM;Mois de reconnaissance de la mère;07;Juillet;CHAR;2
+MRECM;Mois de reconnaissance de la mère;08;Août;CHAR;2
+MRECM;Mois de reconnaissance de la mère;09;Septembre;CHAR;2
+MRECM;Mois de reconnaissance de la mère;10;Octobre;CHAR;2
+MRECM;Mois de reconnaissance de la mère;11;Novembre;CHAR;2
+MRECM;Mois de reconnaissance de la mère;12;Décembre;CHAR;2
+MRECP;Mois de reconnaissance du père;00;Enfant né dans le mariage ou non reconnu par le père ou jugement déclaratif de naissance;CHAR;2
+MRECP;Mois de reconnaissance du père;01;Janvier;CHAR;2
+MRECP;Mois de reconnaissance du père;02;Février;CHAR;2
+MRECP;Mois de reconnaissance du père;03;Mars;CHAR;2
+MRECP;Mois de reconnaissance du père;04;Avril;CHAR;2
+MRECP;Mois de reconnaissance du père;05;Mai;CHAR;2
+MRECP;Mois de reconnaissance du père;06;Juin;CHAR;2
+MRECP;Mois de reconnaissance du père;07;Juillet;CHAR;2
+MRECP;Mois de reconnaissance du père;08;Août;CHAR;2
+MRECP;Mois de reconnaissance du père;09;Septembre;CHAR;2
+MRECP;Mois de reconnaissance du père;10;Octobre;CHAR;2
+MRECP;Mois de reconnaissance du père;11;Novembre;CHAR;2
+MRECP;Mois de reconnaissance du père;12;Décembre;CHAR;2
+NBENF;Nombre d’enfants issus de l’accouchement;1;1 enfant;CHAR;1
+NBENF;Nombre d’enfants issus de l’accouchement;2;2 enfants;CHAR;1
+NBENF;Nombre d’enfants issus de l’accouchement;3;3 enfants ou plus;CHAR;1
+ORIGINOM;Origine du nom de l'enfant;;Origine du nom non connue (Jugement déclaratif de naissance);CHAR;1
+ORIGINOM;Origine du nom de l'enfant;1;Père;CHAR;1
+ORIGINOM;Origine du nom de l'enfant;2;Mère;CHAR;1
+ORIGINOM;Origine du nom de l'enfant;3;Père - Mère;CHAR;1
+ORIGINOM;Origine du nom de l'enfant;4;Mère - Père;CHAR;1
+ORIGINOM;Origine du nom de l'enfant;5;Autre;CHAR;1
+SEXE;Sexe de l’enfant;1;Masculin;CHAR;1
+SEXE;Sexe de l’enfant;2;Féminin;CHAR;1
+SITUATMR;Situation professionnelle de la mère;;Retraitée ou inactive;CHAR;2
+SITUATMR;Situation professionnelle de la mère;S;Salariée;CHAR;2
+SITUATMR;Situation professionnelle de la mère;NS;Active non salariée;CHAR;2
+SITUATMR;Situation professionnelle de la mère;ND;Inconnue;CHAR;2
+SITUATPR;Situation professionnelle du père;;Retraité ou inactif;CHAR;2
+SITUATPR;Situation professionnelle du père;S;Salarié;CHAR;2
+SITUATPR;Situation professionnelle du père;NS;Actif non salarié;CHAR;2
+SITUATPR;Situation professionnelle du père;ND;Inconnue;CHAR;2
+TUCOM;Tranche de commune du lieu de domicile de la mère;;Indéterminé ou pays étranger;CHAR;1
+TUCOM;Tranche de commune du lieu de domicile de la mère;P;Commune de plus de 10 000 habitants;CHAR;1
+TUCOM;Tranche de commune du lieu de domicile de la mère;M;Commune de moins de 10 000 habitants;CHAR;1
+TUCOM;Tranche de commune du lieu de domicile de la mère;A;"Terres australes et antarctiques;COM non précisé";CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;;Indéterminé;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;0;Commune rurale;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;1;Unité urbaine de 2 000 à 4 999 habitants;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;2;Unité urbaine de 5 000 à 9 999 habitants;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;3;Unité urbaine de 10 000 à 19 999 habitants;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;4;Unité urbaine de 20 000 à 49 999 habitants;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;5;Unité urbaine de 50 000 à 99 999 habitants;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;6;Unité urbaine de 100 000 à 199 999 habitants;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;7;Unité urbaine de 200 000 à 1 999 999 habitants;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;8;Agglomération de Paris;CHAR;1
+TUDOM;Tranche d’unité urbaine 2017 du lieu de domicile de la mère;9;COM ou étranger;CHAR;1
