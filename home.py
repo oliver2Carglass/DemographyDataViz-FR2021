@@ -13,7 +13,7 @@ import altair as alt
 
 st.set_page_config(layout='wide')
 
-coder="animations/Animation.json"
+coder="animations/Animation1.json"
 mail="animations/Animation2.json"
 
 p1= Image.open("images/p1.png")
@@ -192,29 +192,6 @@ pre{{
 st.markdown(css, unsafe_allow_html=True)
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # Fonction pour la page d'accueil
