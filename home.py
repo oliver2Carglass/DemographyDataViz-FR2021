@@ -1,23 +1,26 @@
+"""
+WELCOME WELCOME!  
+This project has been created to address a data visualization problem within an academic context. The goal of this project is to create a dynamic and aesthetically pleasing dashboard using three datasets: Marriage, Death, and Birth.
+"""
+
+
+
 import plotly.graph_objects as go
 import streamlit as st
 from streamlit_option_menu import option_menu as option_menu 
 import requests
 from streamlit_lottie import st_lottie
-from PIL import Image
 import json
 import base64
-import matplotlib.pyplot as plt
 import pandas as pd
 import plotly.express as px
-import altair as alt
+
 
 st.set_page_config(layout='wide')
 
 coder="animations/Animation1.json"
-mail="animations/Animation2.json"
 
-p1= Image.open("images/p1.png")
-
+# This function load lotties animation from an URL
 def load_lot(url):
     r = requests.get(url)
     if r.status_code!= 200 : 
@@ -25,186 +28,57 @@ def load_lot(url):
     else :
         return r.json()
 
+# This function load lotties animation from an Local work space
 def load_local_animation(filepath):
     with open(filepath, "r") as f:
         return json.load(f)
 
-# @st.experimental_memo
+# Here we need to go throught the base 64 format to load local images
 def get_image_as_base64(img):
     with open(img, "rb") as f :
         data = f.read()
     return base64.b64encode(data).decode()
 
 
-pro1=get_image_as_base64("images/p1.png")
-pro2=get_image_as_base64("images/p2.png")
-pro3=get_image_as_base64("images/p3.png")
 
 
 css = f"""
 <style>
-#root > div:nth-child(1) > div.withScreencast > div > div > div > section > div.stAppViewBlockContainer.block-container.st-emotion-cache-1jicfl2.ea3mdgi5 > div > div > div > div:nth-child(3) > div > pre > div > code > span{{
-    font-size: 60px;
-   
-}}
-
-
-
-.pro{{
-    
-    height: 350px;
-    border-radius: 25px;
-    
-    display: flex;
-    flex-direction:row;
-    gap: 15px;
-    margin: 15px 7% 15px 3%;
-    border: 10px solid rgba(189, 189, 223, 0.075);
-    box-shadow: 
-        rgba(0, 0, 0, 0.24) 0px 3px 8px, /* Existing semi-transparent shadow */
-        rgba(0, 0, 0, 1) 0px 0px 1px; /* New opaque black shadow */
-}}
-
-.pro:hover{{
-    box-shadow: 
-        rgba(0, 0, 0, 0.50) 0px 3px 8px, /* Existing semi-transparent shadow */
-        rgba(0, 0, 0, 1) 0px 0px 1px; /* New opaque black shadow */
-    cursor:pointer;
-    background-color: rgba(189, 189, 223, 0.2) ;
-}}
-.ima{{
-    border-radius: 15px;
-    border: 1px solid black;
-    margin: 45px;
-    width: 250px;
-    height: 250px;
-    background-size: cover;      
-    background-position: center; 
-    background-repeat: no-repeat;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}}
-
-#p1{{
-    background-image: url('data:image/png;base64,{pro1}');
-}}
-#p2{{
-    background-image: url('data:image/png;base64,{pro2}');
-}}
-#p3{{
-    background-image: url('data:image/png;base64,{pro3}');
-}}
-
 h3{{
     margin-top: 50px;
     font-size: 35px;
 }}
 
-h4{{
-    font-size: 23px;
-    font-family: 'Courier New', Courier, monospace;
-    color: grey;
-}}
-a {{
-    font-size: 18px;
-}}
 
-#form{{
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(189, 189, 223, 0.3);
-    height: 500px;
-    width: 800px;
-    border-radius: 25px;
-    border: 10px solid rgba(189, 189, 223, 0.075);
-    box-shadow: 
-        rgba(0, 0, 0, 0.24) 0px 3px 8px, /* Existing semi-transparent shadow */
-        rgba(0, 0, 0, 1) 0px 0px 1px; /* New opaque black shadow */
-    
-   
-}}
-input{{
-    margin-left: 5%;
-    margin-right: 15%;
-}}
-textarea{{
-    margin-left: 5%;
-    margin-right: 15%;
-}}
-label{{
-    margin-left: 5%;
-    margin-right: 15%;
-}}
 .lottie-animation {{
         margin-left: 1500px;
     }}
 
-/* From Uiverse.io by kamehame-ha */ 
-.button1 {{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 25px 35px;
-  gap: 15px;
-  background-color: #181717;
-  outline: 3px #181717 solid;
-  outline-offset: -3px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: 400ms;
-}}
-
-.button1 .text {{
-
-  color: white;
-  font-weight: 700;
-  font-size: 1em;
-  transition: 400ms;
-}}
-
-.button1 svg path {{
-  transition: 400ms;
-}}
-
-.button1:hover {{
-  background-color: transparent;
-}}
-
-.button1:hover .text {{
-  color: #181717;
-}}
-
-.button1:hover svg path {{
-  fill: #181717;
-}}
 
 .st-emotion-cache-463q5x .token.string{{
     color: #FF4B4B;
 }}
 
-pre{{
-    border: 3px solid black;
-    width:100%;
-}}
+
 </style>
 """
 
-st.markdown(css, unsafe_allow_html=True)
+st.markdown(css, unsafe_allow_html=True)        #this include css in the web site
 
     
 
 
-# Fonction pour la page d'accueil
+# Function containing the welcome page
 def home():
-    st.title("Bienvenue sur mon site :)")
-    st.write("Bienvenue sur la page d'accueil !")
+    st.title("Welcome to my Dash Board :)")
+    st.write("This dash board have been made for a class project")
     
     with st.container():
         col1,col2 = st.columns(2)
         with col1 :
-            st.write("Fait par by Jérémy VIOT le 17/10/2024")
+            st.write("Made by Jérémy VIOT the 10/17/2024  & and first Updated the 12/04/2024")
             st.write('##')
-            st.subheader("Je suis un futur ingénieur en science du numérique passionné par l'IA et la donnée")
+            st.subheader("I am a futur engineer passionated in AI and data visualization")
         with col2:
             ani_code = load_local_animation(coder)
             if ani_code:
@@ -215,337 +89,23 @@ def home():
 
 
 
+# Function to load dataViz page
 
+def page_dataViz():
 
 
+    # ====================================================
+    # =                  DATA PART                       =
+    # ====================================================
+ 
 
+    # Load data :
+    df_d = pd.read_csv("data/2021Death.csv", delimiter=";")
+    df_birth = pd.read_csv("data/2021Birth.csv", delimiter=";")
+    df_w = pd.read_csv("data/2021Wedding.csv", delimiter=";")
 
-
-
-
-
-
-
-
-
-
-
-
-
-# Fonction pour la page A
-def page_a():
-
-    st.title("A Propos de moi")
-    st.write("Voici mes reseaux :")
-    st.markdown("""
-<div style='display:flex; flex-direction: row;'>
-  <button class="button0" onclick="window.location.href='https://www.linkedin.com/in/jeremy-viot-66a12a222/';"> 
-    <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
-      <path fill="#ffffff" d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z"></path>
-    </svg>
-    Continue with LinkedIn
-  </button>
-
-  <style>
-    .button0 {
-      display: flex;
-      background-color: #0A66C2;
-      color: #ffffff;
-      padding: 0.5rem 1.4rem;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      font-weight: 700;
-      text-align: center;
-      vertical-align: middle;
-      align-items: center;
-      border-radius: 0.5rem;
-      gap: 0.75rem;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      transition: .6s ease;
-    }
-
-    .button0 svg {
-      height: 30px;
-    }
-
-    .button0:hover {
-      box-shadow: none;
-    }
-  </style>
-
-  <button class="button2"> 
-    <svg fill="#ffffff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
-      <g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g>
-      <g id="SVGRepo_iconCarrier"> 
-        <title>github</title> 
-        <rect fill="none" height="24" width="24"></rect> 
-        <path d="M12,2A10,10,0,0,0,8.84,21.5c.5.08.66-.23.66-.5V19.31C6.73,19.91,6.14,18,6.14,18A2.69,2.69,0,0,0,5,16.5c-.91-.62.07-.6.07-.6a2.1,2.1,0,0,1,1.53,1,2.15,2.15,0,0,0,2.91.83,2.16,2.16,0,0,1,.63-1.34C8,16.17,5.62,15.31,5.62,11.5a3.87,3.87,0,0,1,1-2.71,3.58,3.58,0,0,1,.1-2.64s.84-.27,2.75,1a9.63,9.63,0,0,1,5,0c1.91-1.29,2.75-1,2.75-1a3.58,3.58,0,0,1,.1,2.64,3.87,3.87,0,0,1,1,2.71c0,3.82-2.34,4.66-4.57,4.91a2.39,2.39,0,0,1,.69,1.85V21c0,.27.16.59.67.5A10,10,0,0,0,12,2Z"></path> 
-      </g>
-    </svg>
-    Continue with Github
-  </button>
-
-  <style>
-    .button2 {
-      display: flex;
-      background-color: rgb(24, 23, 23);
-      color: #ffffff;
-      padding: 0.5rem 1.4rem;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      font-weight: 700;
-      text-align: center;
-      vertical-align: middle;
-      align-items: center;
-      border-radius: 0.5rem;
-      gap: 0.75rem;
-      border: none;
-      cursor: pointer;
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-      transition: .6s ease;
-    }
-
-    .button2 svg {
-      height: 30px;
-    }
-  </style>
-</div>
-""", unsafe_allow_html=True)
-
-    
-
-
-  
-    st.write("---")
-    st.write("##")
-    st.subheader('language skills :')
-    with st.container():
-        col3,col4 = st.columns(2)
-        with col3 :
-            st.subheader("Mon niveau d'anglais basé sur le TOEIC :")
-            
-
-            # Données pour le camembert
-            labels = ['S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'maybe S7']
-            scores = [550, 620, 667, 715, 760, 815, 990]
-
-            # Calcul des tailles des segments du camembert
-            sizes = [scores[0]] + [scores[i] - scores[i - 1] for i in range(1, len(scores))]
-
-            # Couleurs personnalisées
-            colors = [
-                'rgba(255, 0, 0, 0.3)',   # Rouge transparent
-                'rgba(0, 255, 0, 0.3)',   # Vert transparent
-                'rgba(0, 0, 255, 0.3)',   # Bleu transparent
-                'rgba(255, 255, 0, 0.3)', # Jaune transparent
-                'rgba(255, 0, 255, 0.3)', # Magenta transparent
-                'rgba(0, 255, 255, 0.3)', # Cyan transparent
-                'rgba(51, 51, 51, 0.5)'   # Gris foncé avec alpha 0.5 pour "Maybe S7"
-            ]
-
-            # Créer le camembert avec Plotly
-            fig = go.Figure(data=[go.Pie(labels=labels, values=sizes, 
-                                        textinfo='percent+value', 
-                                        hoverinfo='label+percent+value',
-                                        marker=dict(colors=colors),
-                                        pull=[0, 0, 0, 0, 0, 0, 0.1])])  # "maybe S7" légèrement détaché
-
-            # Ajouter un titre au graphique
-       
-
-            # Afficher le graphique dans Streamlit
-            st.plotly_chart(fig)
-        with col4 :
-            
-            # Titre et sous-titre
-            st.subheader('Mon niveau de Mandarin (je sais juste dire bonjour)')
-
-            # Données pour le pie chart
-            sizes = [0.1, 99.9]  # Les valeurs représentant 1% et 99%
-            labels = ['juste "nǐ hǎo"', 'Le reste du language']  # Étiquettes pour chaque section
-
-            # Couleurs personnalisées
-            colors = [
-                'rgba(51, 51, 51, 0.5)',  # Gris foncé avec alpha 0.5 pour 1%
-                'rgba(204, 204, 204, 0.4)' # Gris clair avec alpha 0.4 pour 99%
-            ]
-
-            # Créer le camembert avec Plotly
-            fig = go.Figure(data=[go.Pie(labels=labels, values=sizes, 
-                                        textinfo='percent+value', 
-                                        hoverinfo='label+percent+value',
-                                        marker=dict(colors=colors))])  # Pas de détachement ici
-
-      
-
-            # Afficher le graphique dans Streamlit
-            st.plotly_chart(fig)
-    st.write('---')
-    col1, col2, col3 = st.columns([1, 7, 1])
-    with col2 :
-        data = {
-        "Category": ["WebSite", "Python", "IA", "Data", "chrome-extension", "computer-science-knowledge"],
-        "2022": [0.1, 0.4, 0.0, 0.0, 0.0, 0.25],
-        "2023": [0.5, 0.15, 0.2, 0.1, 0.5, 0.25],
-        "2024": [0.15, 0.40, 0.6, 0.6, 0.05, 0.25],
-    }
-
-        # Create the DataFrame
-        df = pd.DataFrame(data)
-
-        # Melt the DataFrame for easier plotting
-        df_melted = df.melt(id_vars='Category', var_name='année', value_name='Value')
-
-
-        # Create the Altair chart with overlapping bars
-        chart = alt.Chart(df_melted).mark_bar().encode(
-            x=alt.X('Category:O', title='Category'),
-            y=alt.Y('Value:Q', title='Value'),
-            color=alt.Color('année:N',
-                            scale=alt.Scale(domain=['2022', '2023', '2024'], 
-                                            range=['rgba(0, 128, 0, 0.5)',    # Green for 2022
-                                                'rgba(0, 0, 255, 0.5)',     # Blue for 2023
-                                                'rgba(0, 105, 180, 0.5)'])),
-            tooltip=['Category', 'année', 'Value']
-        ).properties(
-            width=400,
-            height=400,
-            title='My Skills Bar Chart by Category and Year'
-        ).configure_mark(
-            opacity=0.8  # Adjust opacity of the bars
-        )
-
-        # Render the chart in Streamlit
-        st.title("My skills using BAR CHART")
-
-        st.altair_chart(chart, use_container_width=True)
-    st.write("---")
-
-
-    st.write("##")
-    with st.container():
-        col3,col4 = st.columns(2)
-        with col3 :
-            st.subheader("""
-            Education :
-            - EFREI (2021-2026)
-            - ILAC (2023)
-            - french BAC
-                        """)
-        with col4 :
-            st.subheader("""
-                        EXPERIENCES :
-                        - 6 month InternShip In Darty Company (as project leader in AI data management)
-                        - 5 month INRAE (as database developer)
-                        - 1 month Manouche Malta (as waiter) 
-""")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Fonction pour la page B
-def page_b():
-     with st.container():
-        st.header("Mes projets")
-        st.write('##')
-        st.markdown("""
-<span class='pro'>
-    <div>
-        <div id='p1' class="ima"></div>
-    </div>
-    <div>
-        <h3>Universal Approximation Theorem</h3>
-        <h4>This project aim to demonstrate the Universal Approxmiation Theorem that say the following thing : every non linear function can be approximated by a MLPL with only one hidden layer and the good amount of neurons</h4>
-        <a href="">visit github repo</a>
-    </div>
-</span>
-""", unsafe_allow_html=True)
-        st.markdown("""
-<span class='pro'>
-    <div>
-        <div id='p2' class="ima"></div>
-    </div>
-    <div>
-        <h3>Microsoft Market Stock 2021</h3>
-        <h4>This project aim to predict the futur microsoft capital fluctuation based on 2021 stock market data set, it use a MLP to make non linear prediction</h4>
-        <a href="">visit github repo</a>
-    </div>
-</span>
-""", unsafe_allow_html=True)
-        st.markdown("""
-<span class='pro'>
-    <div>
-        <div id='p3' class="ima"></div>
-    </div>
-    <div>
-        <h3> DIABETE BINARY CLASSIFICATION </h3>
-        <h4> This project aim to predict case of diabete based a lot of diferents feature, the hardest part is in the data set we used there, hwere half data contain missing values, if you wanna see how I dealt with it please click on the link bellow</h4>
-        <a href="">visit github repo</a>
-    </div>
-</span>
-""", unsafe_allow_html=True)
-
-
-# Fonction pour la page C
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def page_c():
-
-    import pandas as pd
-
-
-    # Charger les données dans un DataFrame
-    df_mort = pd.read_csv("data\etatcivil2021_dec2021_csv\FD_DEC_2021.csv", delimiter=";")
-
-    # Afficher les premières lignes
-  
-
-
-    # Charger les données dans un DataFrame
-    df_nai = pd.read_csv("data\etatcivil2021_nais2021_csv\FD_NAIS_2021.csv", delimiter=";")
-
-    # Afficher les premières lignes
-   
-    # Charger les données dans un DataFrame
-    df_mar = pd.read_csv("data\etatcivil2021_mar2021_csv\mar2021.csv", delimiter=";")
-    df_mort = df_mort.rename(columns={
+    # renaming variable to a more dev understanding
+    df_d = df_d.rename(columns={
     'ADEC': 'Annee_mort',
     'MDEC': 'Mois_mort',
     'JDEC': 'Jour_mort',
@@ -557,7 +117,7 @@ def page_c():
     'DEPNAIS': 'dep_nai',
     'PNAIS': 'pays_nai'
     })
-    df_dec=df_mort.copy()
+    df_dec=df_d.copy()
     df_dec['Date_mort'] = pd.to_datetime(
         df_dec['Jour_mort'].astype(str) + '-' + 
         df_dec['Mois_mort'].astype(str) + '-' + 
@@ -568,7 +128,7 @@ def page_c():
 
     df_dec[['Annee_mort', 'Mois_mort', 'Jour_mort', 'Date_mort']].head()
 
-    # Créer une nouvelle colonne "Date_nai" en combinant Annee_nai, mois_nai et jour_nai
+    # Create a datetime format from 3 var
     df_dec['Date_nai'] = pd.to_datetime(
         df_dec['jour_nai'].astype(str) + '-' + 
         df_dec['mois_nai'].astype(str) + '-' + 
@@ -578,172 +138,152 @@ def page_c():
 
     
 
-    # Supprimer les colonnes qui ne sont plus nécessaires
+    # Delete useless data
     df_dec.drop(columns=['Annee_mort', 'Mois_mort', 'Jour_mort', 'Annee_nai', 'mois_nai', 'jour_nai',"pays_nai"], inplace=True)
 
-    df_born=df_nai.copy()
+    df_born=df_birth.copy()
     df_born.drop(columns=['ACCOUCHR','ANAIS','AGEXACTM','AGEXACTP','AMAR','ARECC',	'ARECM','ARECP','DEPDOM','DMARNAIS','DMARNAIS','DURECEVP','INDLNM','INDLNP','INDNATM','INDNATP','JRECC','JRECM','JRECP','SITUATMR','SITUATPR','MRECC', 'MRECM', 'MRECP','ORIGINOM','TUCOM','TUDOM'], inplace=True)
     
-
-    df_mari=df_mar.copy()
+    df_mari=df_w.copy()
     df_mari.drop(columns=['AMAR','DEPNAIS1','DEPNAIS2','ETAMAT1','ETAMAT2','INDNAT1','INDNAT2','TUCOM', 'TUDOM'], inplace=True)
     df_mari['ANAIS1']= 2021 - df_mari['ANAIS1']
     df_mari['ANAIS2']= 2021 - df_mari['ANAIS2']
 
+    
+    
 
 
 
+   
+    # ====================================================
+    # =                  DASHBOARD                       =
+    # ====================================================
+  
+    # Create the top introduction part :
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    st.title("Démographie 2021")
-    st.write("Cette partie de mon site porte sur l'étude des mariages, naissance et mortalités de 2021")
-    st.write("""Le but est de défaire et écalairecir rumeurs et question du genre :           
-- la population frnacaise est elle en train décroitre ou croitre ?
-- Les hommes vivent t'il moins longtemps que les femmes ?
-- Combien de cas represente une naissance unique ?""")
-    st.write("""⚠️ avertissement 2021 est une année assez particuliere car en plein confinement COVID, on peut donc s'attendre aux choses suivantes : 
-- Mortalité : La surmortalité liée au COVID-19 s'est poursuivie en 2021. Selon l'INSEE, il y a eu une hausse de la mortalité en France, en particulier chez les personnes âgées. Cette surmortalité a perturbé les tendances habituelles des décès.
-- Naissances : Les confinements et l’incertitude économique et sociale ont également eu un effet sur la natalité. La France a connu une baisse des naissances, avec un nombre de naissances historiquement bas début 2021. Ce phénomène est directement lié aux effets psychosociaux de la pandémie en 2020.
-- Espérance de vie : L'espérance de vie a baissé en 2020 à cause de la pandémie, et en 2021 elle a lentement commencé à remonter sans toutefois retrouver ses niveaux d’avant la crise sanitaire.
-- Mariages et divorces : Les confinements et les restrictions ont perturbé les mariages et les divorces. En 2021, après une forte baisse des mariages en 2020, un rattrapage a été observé, avec plus de mariages enregistrés, mais encore en deçà des niveaux d’avant crise.""")
+    st.title("Dashboard on 2021 Demography of France")
+    st.write("This part contain a dash board based on birth, death and wedding of 2021 years")
+    st.write("""The goal is to dismantle and clarify rumors and questions such as:
+- Is the French population decreasing or increasing?
+- Do men live shorter lives than women?
+- How many cases represent a single birth?""")
+    st.write("""⚠️ Warning: 2021 was quite a particular year due to the COVID-19 lockdown, so we can expect the following:
+- Mortality: The excess mortality related to COVID-19 continued in 2021. According to INSEE, there was an increase in mortality in France, especially among the elderly. This excess mortality disrupted the usual death trends.
+- Births: Lockdowns and economic and social uncertainty also had an impact on birth rates. France experienced a decline in births, with historically low numbers of births at the beginning of 2021. This phenomenon is directly linked to the psychosocial effects of the pandemic in 2020.
+- Life expectancy: Life expectancy decreased in 2020 due to the pandemic, and in 2021 it slowly began to recover, but it had not yet returned to pre-crisis levels.
+- Marriages and divorces: Lockdowns and restrictions disrupted marriages and divorces. In 2021, after a significant drop in marriages in 2020, a recovery was observed, with more marriages being recorded, but still below pre-crisis levels.""")
+    st.write("The data come from data.gouv.fr")
     st.write('---')
+    #printing datasets
     c1,c2,c3=st.columns(3)
     with c1 :
-        st.subheader("Le data set sur la Mortalité")
+        st.subheader("Death Dataset")
         df_dec
     with c2 :
-        st.subheader("Le data set sur La natalité")
+        st.subheader("Birth Dataset")
         df_born
     with c3:
-        st.subheader("Le data set sur les mariages")
+        st.subheader("Wedding Dataset")
         df_mari
     st.write("##")
     st.write("---")
     st.write("##")
-    st.title("La mortalité")
-    
+
+
+    # ====================================================
+    # =              PART 1 : MORTALITY                  =
+    # ====================================================
+  
+
+    st.title("MORTALITY")
 
     df_dec['Mois_mort'] = df_dec['Date_mort'].dt.month
+    # Display Selector
+    affichage = st.selectbox('Choose your display type :', 
+                            ['Month', 'Season'])
 
-    # Sélecteur pour le choix d'affichage
-    affichage = st.selectbox('Choisissez le type d\'affichage :', 
-                            ['Par mois', 'Par saison'])
-
-    # Compter les décès en fonction de l'option choisie
-    if affichage == 'Par mois':
+    # Counting death depending on what is choosen
+    if affichage == 'Month':
         # Compter les décès par mois
         deces_par_mois = df_dec['Mois_mort'].value_counts().sort_index()
         df_plot = pd.DataFrame({
-            'Mois': deces_par_mois.index,
-            'Nombre_de_deces': deces_par_mois.values
+            'Month': deces_par_mois.index,
+            'Number_of_death': deces_par_mois.values
         })
         
-        # Créer un label pour chaque mois
+        # Create a label for each month
         mois_labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-        df_plot['Mois'] = [mois_labels[m - 1] for m in df_plot['Mois']]
+        df_plot['Month'] = [mois_labels[m - 1] for m in df_plot['Month']]
         
-    elif affichage == 'Par saison':
-        # Fonction pour assigner une saison à chaque mois
+    elif affichage == 'Season':
+        # Create the concept of season
         def saison(mois):
             if mois in [12, 1, 2]:
-                return 'Hiver'
+                return 'Winter'
             elif mois in [3, 4, 5]:
-                return 'Printemps'
+                return 'Spring'
             elif mois in [6, 7, 8]:
-                return 'Été'
+                return 'Summer'
             elif mois in [9, 10, 11]:
-                return 'Automne'
+                return 'Autumn'
 
-        # Appliquer la fonction pour créer une nouvelle colonne 'Saison'
+        # Apply the function to create season
         df_dec['Saison'] = df_dec['Mois_mort'].apply(saison)
 
-        # Compter les décès par saison
+        # Count death by season
         deces_par_saison = df_dec['Saison'].value_counts()
         df_plot = pd.DataFrame({
-            'Saison': deces_par_saison.index,
-            'Nombre_de_deces': deces_par_saison.values
+            'Season': deces_par_saison.index,
+            'Number_of_death': deces_par_saison.values
         })
 
-    # Créer le graphique à barres avec Plotly
-    if affichage == 'Par mois':
-        fig = px.bar(df_plot, x='Mois', y='Nombre_de_deces',
-                    title='Nombre de décès par mois',
-                    labels={'Nombre_de_deces': 'Nombre de décès', 'Mois': 'Mois'},
-                    color='Nombre_de_deces', 
+    # Create graph using plotly
+    if affichage == 'Month':
+        fig = px.bar(df_plot, x='Month', y='Number_of_death',
+                    title='Number of death per month',
+                    labels={'Number_of_death': 'Number of death', 'Mois': 'Mois'},
+                    color='Number_of_death', 
                     color_continuous_scale=px.colors.sequential.Sunset)
-    else:  # 'Par saison'
-        fig = px.bar(df_plot, x='Saison', y='Nombre_de_deces',
-                    title='Nombre de décès par saison',
-                    labels={'Nombre_de_deces': 'Nombre de décès', 'Saison': 'Saison'},
-                    color='Nombre_de_deces', 
+    else:  # With seasons
+        fig = px.bar(df_plot, x='Season', y='Number_of_death',
+                    title='Number of death per Season',
+                    labels={'Number_of_death': 'Number of death', 'Season': 'Saison'},
+                    color='Number_of_death', 
                     color_continuous_scale=px.colors.sequential.Sunset)
 
-    # Afficher le graphique dans Streamlit
+    # print using streamlit
     st.plotly_chart(fig)
+    st.write("Here is the improved translation in English: \n The reason people are more likely to die in winter and spring is due to the low temperatures. In winter, the cold is especially deadly, and although the sun may shine brightly in spring, the temperatures remain very low, which can have serious effects on health.")
+    st.write("---")
+    st.subheader("Mortality by Sex and Place")
 
 
 
-
-    sexe_labels = {1: 'Masculin', 2: 'Féminin'}
+    sexe_labels = {1: 'Male', 2: 'Female'}
     df_sexe = df_dec['Sexe'].value_counts().reset_index()
     df_sexe.columns = ['Sexe', 'Nombre_de_deces']
     df_sexe['Sexe'] = df_sexe['Sexe'].map(sexe_labels)
 
-    # Créer le pie chart pour la répartition par sexe
+    # Create a pie chart for sex repartition
     fig_sexe = px.pie(df_sexe, values='Nombre_de_deces', names='Sexe',
-                    title='Répartition des décès par sexe',
+                    title='Death per sex',
                     color='Sexe', 
                     color_discrete_sequence=px.colors.qualitative.Set1)
 
-    # Graphique 2 : Décès au même endroit que la naissance
+
+    # Graph 2 : Death same place than birth
     df_dec['Same_Department'] = df_dec['Dep_dec'] == df_dec['dep_nai']
     same_dep_counts = df_dec['Same_Department'].value_counts().reset_index()
     same_dep_counts.columns = ['Same_Department', 'Nombre_de_deces']
     same_dep_counts['Same_Department'] = same_dep_counts['Same_Department'].map({True: 'Oui', False: 'Non'})
 
-    # Créer le pie chart pour la comparaison des départements
+    # Create pie chart for the comparison of departement
     fig_location = px.pie(same_dep_counts, values='Nombre_de_deces', names='Same_Department',
-                        title='Décès au même endroit que la naissance',
+                        title='Death at the same place than birth ',
                         color='Same_Department', 
                         color_discrete_sequence=px.colors.qualitative.Set1)
 
-    # Afficher les graphiques dans Streamlit
+    # Print using Streamlit
     col1, col2 = st.columns(2)
 
     with col1:
@@ -751,53 +291,54 @@ def page_c():
 
     with col2:
         st.plotly_chart(fig_location)
-    
+    st.write("50/50 looks kinda logical ")
+    st.write("---")
 
 
 
 
     df_dec['Date_mort'] = pd.to_datetime(df_dec['Date_mort'])
 
-    # Calculer l'âge à la date de décès
-    df_dec['Age'] = df_dec['Date_mort'].dt.year - df_mort['Annee_nai']
+    # Calculate the age of death
+    df_dec['Age'] = df_dec['Date_mort'].dt.year - df_d['Annee_nai']
 
-    # Séparer les âges par sexe
+    # Split age by sex
     df_femmes = df_dec[df_dec['Sexe'] == 2]
     df_hommes = df_dec[df_dec['Sexe'] == 1]
 
-    # Regrouper par date de décès (par jour)
+    # Group by the death date (day)
     age_femmes = df_femmes.groupby(df_femmes['Date_mort'].dt.date)['Age'].mean()
     age_hommes = df_hommes.groupby(df_hommes['Date_mort'].dt.date)['Age'].mean()
 
-    # Créer l'area chart avec Plotly
+    # Create area chart using plotly
     fig = go.Figure()
 
-    # Ajouter la zone pour les femmes
+    # Add the Female zone
     fig.add_trace(go.Scatter(
         x=age_femmes.index,
         y=age_femmes,
         fill='tozeroy',
-        mode='none',  # Mode none pour ne pas afficher de lignes
-        name='Femmes',
+        mode='none',    # MOd none to not print lines
+        name='Female',
         fillcolor='skyblue'
     ))
 
-    # Ajouter la zone pour les hommes
+    # Add the male zone
     fig.add_trace(go.Scatter(
         x=age_hommes.index,
         y=age_hommes,
         fill='tozeroy',
-        mode='none',  # Mode none pour ne pas afficher de lignes
-        name='Hommes',
+        mode='none',    # MOd none to not print lines
+        name='Male',
         fillcolor='lightcoral'
     ))
 
-    # Ajouter des détails au graphique
+    # ADdd detail to graph
     fig.update_layout(
-        title='Âge de Décès des Femmes et des Hommes au Fil des Jours',
+        title='Male and Female age depending of the day',
         xaxis_title='Date',
-        yaxis_title='Âge moyen de décès',
-        yaxis=dict(range=[55, 100]),  # Limiter l'axe Y entre 55 et 100
+        yaxis_title='Mean age death',
+        yaxis=dict(range=[60, 100]),  # Limiter l'axe Y entre 55 et 100
         xaxis=dict(
             tickmode='array',
             tickvals=pd.date_range(start=age_femmes.index.min(), end=age_femmes.index.max(), freq='MS'),  # Affiche seulement les débuts de mois
@@ -807,9 +348,13 @@ def page_c():
         template='plotly_white'  # Thème
     )
 
-    # Afficher le graphique dans Streamlit
-    st.title("Analyse de l'Âge de Décès")
+    # print using streamlit
+    st.subheader("Age of Death ")
     st.plotly_chart(fig)
+    st.write('---')
+
+
+
 
     d1,d2 =st.columns([3,8])
     with d1 :
@@ -845,46 +390,42 @@ def page_c():
         }
 
 
-        # Ajouter une colonne "Région" au DataFrame en mappant les départements aux régions
+        # Add rregion to the dataframe
         df_dec['Région'] = df_dec['Dep_dec'].astype(str).map(departement_to_region)
 
-        # Compter le nombre de décès par région
+        # Count the number of death per region
         deces_par_region = df_dec['Région'].value_counts()
 
-        # Trier les résultats par nombre de décès
+        # Sort the result
         deces_par_region_sorted = deces_par_region.sort_values(ascending=False)
 
         
 
-        # Si vous utilisez Streamlit pour afficher les résultats dans l'application :
-        
-
-        st.subheader("Régions triées par nombre de décès")
+        st.subheader("Region sorted by number of death")
         st.write(deces_par_region_sorted)
 
     with d2 :
         
-
         deces_par_departement = df_dec['Dep_dec'].value_counts().reset_index()
         deces_par_departement.columns = ['Dep_dec', 'Nombre_deces']
 
-    # Importer un fichier GeoJSON contenant les géométries des départements français
+        # Import the file with french region 
         geojson_url = 'https://raw.githubusercontent.com/gregoiredavid/france-geojson/master/departements.geojson'
 
-        # Créer la carte choroplèthe
+        # Create the map
         fig = px.choropleth(
             deces_par_departement,
-            geojson=geojson_url,  # Le fichier GeoJSON des départements
-            locations='Dep_dec',  # Colonne correspondant aux départements dans ton DataFrame
-            featureidkey="properties.code",  # Clé dans le GeoJSON qui correspond aux départements
-            color='Nombre_deces',  # Ce que l'on colorie (le nombre de décès)
-            color_continuous_scale="Blues",  # Echelle de couleurs
-            scope="europe",  # Zoom sur la France
-            labels={'Nombre_deces': 'Nombre de décès'},  # Etiquette pour la légende
-            title='Répartition des Décès par Département'
+            geojson=geojson_url,  #  GeoJSON file of departements
+            locations='Dep_dec',  # Column corresponding to departments of df
+            featureidkey="properties.code",  # GEOJSON Value correponding to departement
+            color='Nombre_deces',  
+            color_continuous_scale="Blues", 
+            scope="europe",  
+            labels={'Nombre_deces': 'Nunber of death '}, 
+            title='Map view of death per departement'
         )
 
-        # Mise à jour du layout pour ajuster la carte
+
         fig.update_geos(
             visible=False,
             resolution=50,
@@ -895,15 +436,22 @@ def page_c():
         )
 
         fig.update_layout(
-        width=1200,  # Largeur de la carte
-        height=800   # Hauteur de la carte
+        width=1200, 
+        height=800  
         )
         # Afficher la carte dans Streamlit
-        st.subheader("Répartition des Décès par Département en France")
+        st.subheader("Death repartition depending on departments")
         st.plotly_chart(fig)
     
+
+
+
+
+    # ====================================================
+    # =              PART 2 : MATALITY                  =
+    # ====================================================
     st.write("---")
-    st.title("Natalités :")
+    st.title("NATALITY")
     st.write('##')
     c1,c2 = st.columns([3,8])
 
@@ -912,31 +460,29 @@ def page_c():
 
 
 
-        # Compter le nombre de naissances par région
+        # Count number of birth per dep
         naissances_par_region = df_dec['Région_naissance'].value_counts()
 
-        # Trier les résultats par nombre de naissances
+        # Sort result by number of death
         naissances_par_region_sorted = naissances_par_region.sort_values(ascending=False)
 
-        # Afficher les résultats
-        st.subheader("Régions triées par nombre de naissances")
+        # Print 
+        st.subheader("region sorted by birth number")
         st.write(naissances_par_region_sorted)
     with c2 :
         df_dec['dep_nai'] = df_dec['dep_nai'].astype(str).str.zfill(2)
-
-        # Compter le nombre de naissances par département
         naissances_par_departement = df_dec['dep_nai'].value_counts().reset_index()
         naissances_par_departement.columns = ['dep_nai', 'nombre_naissances']
 
-        # Créer la carte choroplèthe avec Plotly
+        # Create map
         fig = px.choropleth(
             naissances_par_departement,
-            geojson="https://france-geojson.gregoiredavid.fr/repo/departements.geojson",  # GeoJSON des départements français
-            locations='dep_nai',  # Les départements de naissance
-            featureidkey="properties.code",  # Le code INSEE dans le GeoJSON
-            color='nombre_naissances',  # Le nombre de naissances par département
-            color_continuous_scale="Blues",  # Echelle de couleur
-            labels={'nombre_naissances': 'Nombre de Naissances'}
+            geojson="https://france-geojson.gregoiredavid.fr/repo/departements.geojson",
+            locations='dep_nai',  
+            featureidkey="properties.code",  
+            color='nombre_naissances',  
+            color_continuous_scale="Blues", 
+            labels={'nombre_naissances': 'Number of Birth'}
         )
 
         # Ajuster la mise en page de la carte
@@ -950,13 +496,14 @@ def page_c():
             width=1200,  # Ajuster la hauteur de la carte
             margin={"r":0,"t":50,"l":0,"b":0},  # Marges pour une meilleure vue
             coloraxis_colorbar=dict(
-                title="Nombre de Naissances"
+                title="Number of Birth"
             )
         )
 
         # Afficher la carte dans Streamlit
-        st.subheader("Carte des Naissances par Département")
+        st.subheader("Map of Birth per Region")
         st.plotly_chart(fig)
+    st.write('---')
 
 
 
@@ -981,24 +528,25 @@ def page_c():
         regions_combined,
         x=regions_combined.index,
         y=['Naissances', 'Décès'],  # Colonnes à afficher
-        labels={'value': 'Nombre', 'x': 'Région'},
-        title='Nombre de Naissances et de Décès par Région',
+        labels={'value': 'Number', 'x': 'Region'},
+        title='Number of Birth & Death per region ',
         barmode='group',  # Choix "group" pour afficher les barres côte à côte (ou "stack" pour empiler)
         color_discrete_map={'Naissances': 'blue', 'Décès': 'red'}  # Couleurs personnalisées pour chaque série
     )
 
     # Ajuster la mise en page du graphique
     fig.update_layout(
-        xaxis_title="Région",
-        yaxis_title="Nombre",
+        xaxis_title="Region",
+        yaxis_title="Number",
         xaxis_tickangle=-45,  # Rotation des labels pour une meilleure lisibilité
         width=1200,  # Ajuster la largeur du graphique
         height=800   # Ajuster la hauteur du graphique
     )
 
     # Afficher le graphique dans Streamlit
-    st.title("Analyse des Naissances et Décès par Région")
+    st.title("Analysis of Birth per region")
     st.plotly_chart(fig)
+    st.write("---")
 
 
     repartition_sexe = df_born['SEXE'].value_counts().reset_index()
@@ -1335,67 +883,7 @@ def page_c():
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-def page_d():
-    st.header('Get in Touch !')
-    st.write("##")
-    st.subheader("Si vous voulez me communiquer bug, recommandation ou information qui vous semblerait utile, envoyez moi un mail a travers ce fomulaire : ")
-    st.write("##")
-    col1, col2 = st.columns([7,3])
-    with col1 :
-        contact_form= """
-        <form id="form" action="https://formsubmit.co/jeremy.viot@efrei.net" method="POST">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="">Body :</label>
-            <textarea style="height: 500px;" id="largeText" name="largeText" placeholder="Entrez un grand volume de texte ici..."></textarea><br><br>
-            <div style="text-align: center; margin-top:100px;">
-                <button type="submit" class="button">
-                        <span>Submit</span>
-                    </button>
-            </div>
-            
-            
-        </form>
-    """
-    
-        st.markdown(contact_form, unsafe_allow_html=True)
-    with col2 :    
-        ani_mail = load_local_animation(mail)
-        if ani_mail:
-            st_lottie(ani_mail, height="200px")  # Appel pour rendre l'animation
+   
 
 
 
@@ -1403,11 +891,8 @@ def page_d():
 st.sidebar.title("Dash Board sur la demographie 2021")
 pages = {
     
-    "Accueil": home,
-    "A propos de moi": page_a,
-    "Mes Projets": page_b,
-    "Data visualisation": page_c,
-    "Contacter": page_d
+    "Data visualisation": page_dataViz,
+    "Accueil": home
 }
 
 
