@@ -110,7 +110,7 @@ def page_dataViz():
     'MDEC': 'Mois_mort',
     'JDEC': 'Jour_mort',
     'DEPDEC': 'Dep_dec',
-    'SEXE': 'Sexe',
+    'SEXE': 'Sex',
     'ANAIS': 'Annee_nai',
     'MNAIS': 'mois_nai',
     'JNAIS': 'jour_nai',
@@ -217,7 +217,7 @@ def page_dataViz():
         
     elif affichage == 'Season':
         # Create the concept of season
-        def saison(mois):
+        def season(mois):
             if mois in [12, 1, 2]:
                 return 'Winter'
             elif mois in [3, 4, 5]:
@@ -228,13 +228,13 @@ def page_dataViz():
                 return 'Autumn'
 
         # Apply the function to create season
-        df_dec['Saison'] = df_dec['Mois_mort'].apply(saison)
+        df_dec['Season'] = df_dec['Mois_mort'].apply(season)
 
         # Count death by season
-        deces_par_saison = df_dec['Saison'].value_counts()
+        deces_par_season = df_dec['Season'].value_counts()
         df_plot = pd.DataFrame({
-            'Season': deces_par_saison.index,
-            'Number_of_death': deces_par_saison.values
+            'Season': deces_par_season.index,
+            'Number_of_death': deces_par_season.values
         })
 
     # Create graph using plotly
@@ -247,7 +247,7 @@ def page_dataViz():
     else:  # With seasons
         fig = px.bar(df_plot, x='Season', y='Number_of_death',
                     title='Number of death per Season',
-                    labels={'Number_of_death': 'Number of death', 'Season': 'Saison'},
+                    labels={'Number_of_death': 'Number of death', 'Season': 'Season'},
                     color='Number_of_death', 
                     color_continuous_scale=px.colors.sequential.Sunset)
 
@@ -260,25 +260,25 @@ def page_dataViz():
 
 
     sexe_labels = {1: 'Male', 2: 'Female'}
-    df_sexe = df_dec['Sexe'].value_counts().reset_index()
-    df_sexe.columns = ['Sexe', 'Nombre_de_deces']
-    df_sexe['Sexe'] = df_sexe['Sexe'].map(sexe_labels)
+    df_sexe = df_dec['Sex'].value_counts().reset_index()
+    df_sexe.columns = ['Sex', 'Number_of_death']
+    df_sexe['Sex'] = df_sexe['Sex'].map(sexe_labels)
 
     # Create a pie chart for sex repartition
-    fig_sexe = px.pie(df_sexe, values='Nombre_de_deces', names='Sexe',
+    fig_sexe = px.pie(df_sexe, values='Number_of_death', names='Sex',
                     title='Death per sex',
-                    color='Sexe', 
+                    color='Sex', 
                     color_discrete_sequence=px.colors.qualitative.Set1)
 
 
     # Graph 2 : Death same place than birth
     df_dec['Same_Department'] = df_dec['Dep_dec'] == df_dec['dep_nai']
     same_dep_counts = df_dec['Same_Department'].value_counts().reset_index()
-    same_dep_counts.columns = ['Same_Department', 'Nombre_de_deces']
+    same_dep_counts.columns = ['Same_Department', 'Number_of_death']
     same_dep_counts['Same_Department'] = same_dep_counts['Same_Department'].map({True: 'Oui', False: 'Non'})
 
     # Create pie chart for the comparison of departement
-    fig_location = px.pie(same_dep_counts, values='Nombre_de_deces', names='Same_Department',
+    fig_location = px.pie(same_dep_counts, values='Number_of_death', names='Same_Department',
                         title='Death at the same place than birth ',
                         color='Same_Department', 
                         color_discrete_sequence=px.colors.qualitative.Set1)
@@ -303,8 +303,8 @@ def page_dataViz():
     df_dec['Age'] = df_dec['Date_mort'].dt.year - df_d['Annee_nai']
 
     # Split age by sex
-    df_femmes = df_dec[df_dec['Sexe'] == 2]
-    df_hommes = df_dec[df_dec['Sexe'] == 1]
+    df_femmes = df_dec[df_dec['Sex'] == 2]
+    df_hommes = df_dec[df_dec['Sex'] == 1]
 
     # Group by the death date (day)
     age_femmes = df_femmes.groupby(df_femmes['Date_mort'].dt.date)['Age'].mean()
@@ -456,12 +456,12 @@ def page_dataViz():
     c1,c2 = st.columns([3,8])
 
     with c1 :
-        df_dec['Région_naissance'] = df_dec['dep_nai'].astype(str).map(departement_to_region)
+        df_dec['Birth_region'] = df_dec['dep_nai'].astype(str).map(departement_to_region)
 
 
 
         # Count number of birth per dep
-        naissances_par_region = df_dec['Région_naissance'].value_counts()
+        naissances_par_region = df_dec['Birth_region'].value_counts()
 
         # Sort result by number of death
         naissances_par_region_sorted = naissances_par_region.sort_values(ascending=False)
@@ -508,30 +508,30 @@ def page_dataViz():
 
 
 
-    df_dec['Région_naissance'] = df_dec['dep_nai'].astype(str).map(departement_to_region)
+    df_dec['Birth_region'] = df_dec['dep_nai'].astype(str).map(departement_to_region)
     df_dec['Région_deces'] = df_dec['Dep_dec'].astype(str).map(departement_to_region)
 
     # Compter le nombre de naissances par région
-    naissances_par_region = df_dec['Région_naissance'].value_counts()
+    naissances_par_region = df_dec['Birth_region'].value_counts()
 
     # Compter le nombre de décès par région
     deces_par_region = df_dec['Région_deces'].value_counts()
 
     # Créer un DataFrame combiné pour les naissances et les décès
     regions_combined = pd.DataFrame({
-        'Naissances': naissances_par_region,
-        'Décès': deces_par_region
+        'Births': naissances_par_region,
+        'Deaths': deces_par_region
     }).fillna(0)  # Remplir les valeurs manquantes par 0
 
     # Créer le graphique avec deux barres empilées
     fig = px.bar(
         regions_combined,
         x=regions_combined.index,
-        y=['Naissances', 'Décès'],  # Colonnes à afficher
+        y=['Births', 'Deaths'],  # Colonnes à afficher
         labels={'value': 'Number', 'x': 'Region'},
         title='Number of Birth & Death per region ',
         barmode='group',  # Choix "group" pour afficher les barres côte à côte (ou "stack" pour empiler)
-        color_discrete_map={'Naissances': 'blue', 'Décès': 'red'}  # Couleurs personnalisées pour chaque série
+        color_discrete_map={'Births': 'blue', 'Deaths': 'red'}  # Couleurs personnalisées pour chaque série
     )
 
     # Ajuster la mise en page du graphique
@@ -550,31 +550,31 @@ def page_dataViz():
 
 
     repartition_sexe = df_born['SEXE'].value_counts().reset_index()
-    repartition_sexe.columns = ['SEXE', 'Nombre']
+    repartition_sexe.columns = ['SEXE', 'Number']
 
     # Remplacer les codes par les noms correspondants
-    repartition_sexe['SEXE'] = repartition_sexe['SEXE'].replace({1: 'Masculin', 2: 'Féminin'})
+    repartition_sexe['SEXE'] = repartition_sexe['SEXE'].replace({1: 'Male', 2: 'Female'})
 
     # Créer le pie chart pour la répartition par sexe
     fig_sexe = px.pie(
         repartition_sexe,
-        values='Nombre',
+        values='Number',
         names='SEXE',
-        title='Répartition des Sexes à la Naissance',
+        title='Gender Distribution at Birth',
         color='SEXE',
-        color_discrete_map={'Masculin': 'blue', 'Féminin': 'pink'}  # Couleurs pour les sexes
+        color_discrete_map={'Male': 'blue', 'Female': 'pink'}  # Couleurs pour les sexes
     )
 
     # Compter la répartition du nombre d'enfants par naissance
     repartition_nb_enfants = df_born['NBENF'].value_counts().reset_index()
-    repartition_nb_enfants.columns = ['NBENF', 'Nombre']
+    repartition_nb_enfants.columns = ['NBENF', 'Number']
 
     # Créer le pie chart pour la répartition du nombre d'enfants par naissance
     fig_nb_enfants = px.pie(
         repartition_nb_enfants,
-        values='Nombre',
+        values='Number',
         names='NBENF',
-        title='Répartition du Nombre d\'Enfants par Naissance',
+        title='Birth Multiplicity Distribution',
         color='NBENF',
         color_discrete_sequence=px.colors.qualitative.Set3  # Choix de couleurs
     )
@@ -586,18 +586,18 @@ def page_dataViz():
     
     c1,c2 = st.columns(2)
     with c1 :
-        st.subheader("nombre d'enfant par naissance")
+        st.subheader("Number of children per birth")
         st.plotly_chart(fig_nb_enfants)
     with c2 :
-        st.subheader("genre des nouveaux nés")
+        st.subheader("Gender of newborns")
         st.plotly_chart(fig_sexe)
 
 
-    affichage = st.selectbox('Choisissez le type d\'affichage :', 
-                         ['Par mois', 'Par saison'], key='selectbox_naissances')
+    affichage = st.selectbox('Choose the display type :', 
+                         ['Per month', 'Per season'], key='selectbox_naissances')
 
     # Compter les naissances en fonction de l'option choisie
-    if affichage == 'Par mois':
+    if affichage == 'Per month':
         # Compter les naissances par mois
         naissances_par_mois = df_born['MNAIS'].value_counts().sort_index()
         df_plot = pd.DataFrame({
@@ -609,9 +609,9 @@ def page_dataViz():
         mois_labels = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
         df_plot['Mois'] = [mois_labels[m - 1] for m in df_plot['Mois']]
         
-    elif affichage == 'Par saison':
-        # Fonction pour assigner une saison à chaque mois
-        def saison(mois):
+    elif affichage == 'Per season':
+        # Fonction pour assigner une season à chaque mois
+        def season(mois):
             if mois in [12, 1, 2]:
                 return 'Hiver'
             elif mois in [3, 4, 5]:
@@ -621,27 +621,27 @@ def page_dataViz():
             elif mois in [9, 10, 11]:
                 return 'Automne'
 
-        # Appliquer la fonction pour créer une nouvelle colonne 'Saison'
-        df_born['Saison'] = df_born['MNAIS'].apply(saison)
+        # Appliquer la fonction pour créer une nouvelle colonne 'Season'
+        df_born['Season'] = df_born['MNAIS'].apply(season)
 
-        # Compter les naissances par saison
-        naissances_par_saison = df_born['Saison'].value_counts()
+        # Compter les naissances par season
+        naissances_par_season = df_born['Season'].value_counts()
         df_plot = pd.DataFrame({
-            'Saison': naissances_par_saison.index,
-            'Nombre_de_naissances': naissances_par_saison.values
+            'Season': naissances_par_season.index,
+            'Nombre_de_naissances': naissances_par_season.values
         })
 
     # Créer le graphique à barres avec Plotly
-    if affichage == 'Par mois':
+    if affichage == 'Per month':
         fig = px.bar(df_plot, x='Mois', y='Nombre_de_naissances',
-                    title='Nombre de Naissances par Mois',
-                    labels={'Nombre_de_naissances': 'Nombre de Naissances', 'Mois': 'Mois'},
+                    title='Number of Birth per Month',
+                    labels={'Nombre_de_naissances': 'Number of Birth', 'Mois': 'Mois'},
                     color='Nombre_de_naissances', 
                     color_continuous_scale=px.colors.sequential.Sunset)
-    else:  # 'Par saison'
-        fig = px.bar(df_plot, x='Saison', y='Nombre_de_naissances',
-                    title='Nombre de Naissances par Saison',
-                    labels={'Nombre_de_naissances': 'Nombre de Naissances', 'Saison': 'Saison'},
+    else:  # 'Per season'
+        fig = px.bar(df_plot, x='Season', y='Nombre_de_naissances',
+                    title='Number of Birth per season',
+                    labels={'Nombre_de_naissances': 'Number of Birth', 'Season': 'Season'},
                     color='Nombre_de_naissances', 
                     color_continuous_scale=px.colors.sequential.Sunset)
 
@@ -655,7 +655,7 @@ def page_dataViz():
     # Histogramme pour l'âge des mères
     fig.add_trace(go.Histogram(
         x=df_born['AGEMERE'],
-        name='Âge des Mères',
+        name='Mothers\' Age',
         opacity=0.5,  # Niveau de transparence
         marker=dict(color='red'),  # Couleur rouge pour les mères
         histnorm='probability',  # Normaliser pour afficher les proportions
@@ -665,7 +665,7 @@ def page_dataViz():
     # Histogramme pour l'âge des pères
     fig.add_trace(go.Histogram(
         x=df_born['AGEPERE'],
-        name='Âge des Pères',
+        name='Fathers\' Age',
         opacity=0.5,  # Niveau de transparence
         marker=dict(color='blue'),  # Couleur bleue pour les pères
         histnorm='probability',  # Normaliser pour afficher les proportions
@@ -674,8 +674,8 @@ def page_dataViz():
 
     # Ajouter des détails au graphique
     fig.update_layout(
-        title='Répartition des Âges des Mères et des Pères en Fonction des Naissances',
-        xaxis_title='Âge',
+        title='Distribution of Mothers\' and Fathers\' Ages Based on Births',
+        xaxis_title='Age',
         yaxis_title='Proportion',
         barmode='overlay',  # Superposer les histogrammes
         template='plotly_white',  # Thème
@@ -683,19 +683,19 @@ def page_dataViz():
     )
 
     # Afficher le graphique dans Streamlit
-    st.title("Analyse de l'Âge des Parents en Fonction des Naissances")
+    st.title("Analysis of Parents' Age Based on Births")
     st.plotly_chart(fig)
 
     st.write("##")
     st.write("---")
     st.write("##")
-    st.title('MARIAGES :')
+    st.title('WEDDINGS :')
     st.write("##")
     mariages_par_jour = df_mari['JSEMAINE'].value_counts().sort_index()
 
     # Créer un selectbox pour choisir les départements
     departements_uniques = df_mari['DEPMAR'].unique()
-    departement_selection = st.multiselect('Sélectionnez les départements à inclure :', options=departements_uniques, default=departements_uniques.tolist())
+    departement_selection = st.multiselect('Select the departments to include :', options=departements_uniques, default=departements_uniques.tolist())
 
     # Filtrer les données en fonction des départements sélectionnés
     if departement_selection:
@@ -717,22 +717,22 @@ def page_dataViz():
         df_plot,
         x='Jour',
         y='Nombre de Mariages',
-        title='Nombre de Mariages par Jour de la Semaine',
-        labels={'Nombre de Mariages': 'Nombre de Mariages', 'Jour': 'Jour de la Semaine'},
+        title='Number of Marriages by Day of the Week ',
+        labels={'Nombre de Mariages': 'Number of Weddings', 'Jour': 'Day of the week'},
         color='Nombre de Mariages',  # Couleur selon le nombre de mariages
         color_continuous_scale=px.colors.sequential.Viridis  # Palette de couleurs
     )
 
     # Ajuster la mise en page du graphique
     fig.update_layout(
-        xaxis_title="Jour de la Semaine",
-        yaxis_title="Nombre de Mariages",
+        xaxis_title="Day of the Week",
+        yaxis_title="Number of weddings",
         width=800,  # Ajuster la largeur du graphique
         height=600  # Ajuster la hauteur du graphique
     )
 
     # Afficher le graphique dans Streamlit
-    st.title("Analyse des Mariages par Jour de la Semaine")
+    st.title("Analysis of Marriages by Day of the Week")
     st.plotly_chart(fig)
 
     mariages_par_mois = df_mari['MMAR'].value_counts().sort_index()
@@ -740,7 +740,7 @@ def page_dataViz():
 # Créer un selectbox pour choisir les départements
     departements_uniques = df_mari['DEPMAR'].unique()
     departement_selection = st.multiselect(
-        'Sélectionnez les départements à inclure :', 
+        'Select the departments to include :', 
         options=departements_uniques, 
         default=departements_uniques.tolist(),
         key='departement_selection'  # Ajout d'une clé unique pour éviter les doublons
@@ -766,22 +766,22 @@ def page_dataViz():
         df_plot,
         x='Mois',
         y='Nombre de Mariages',
-        title='Nombre de Mariages par Mois',
-        labels={'Nombre de Mariages': 'Nombre de Mariages', 'Mois': 'Mois'},
+        title='Number of weddings per Month',
+        labels={'Nombre de Mariages': 'Number of weddings', 'Mois': 'Month'},
         color='Nombre de Mariages',  # Couleur selon le nombre de mariages
         color_continuous_scale=px.colors.sequential.Viridis  # Palette de couleurs
     )
 
     # Ajuster la mise en page du graphique
     fig.update_layout(
-        xaxis_title="Mois",
-        yaxis_title="Nombre de Mariages",
+        xaxis_title="Month",
+        yaxis_title="Number of Weddings",
         width=800,  # Ajuster la largeur du graphique
         height=600  # Ajuster la hauteur du graphique
     )
 
     # Afficher le graphique dans Streamlit
-    st.title("Analyse des Mariages par Mois")
+    st.title("Analysis of Wedding depending on Month")
     st.plotly_chart(fig)
 
 
@@ -809,7 +809,7 @@ def page_dataViz():
 
         # Configuration des paramètres de mise en page
         fig.update_layout(
-            title='Histogramme Groupé des Mariage par genre',
+            title='Grouped Histogram of Marriages by Gender and Age',
             xaxis_title='Âge',
             yaxis_title='Nombre de mariage',
             barmode='overlay',  # Overlay pour voir les barres superposées
@@ -820,7 +820,7 @@ def page_dataViz():
         )
 
         # Afficher le graphique dans Streamlit
-        st.title("Histogramme Groupé des Mariage par genre")
+        st.title("Grouped Histogram of Marriages by Gender and Age")
         st.plotly_chart(fig)
     with c2 :
         #Calculer la différence d'âge (valeur absolue)
@@ -833,7 +833,7 @@ def page_dataViz():
         diff_age_par_departement = diff_age_par_departement.sort_values(by='Diff_Age', ascending=False)
 
         # Afficher la liste des départements et de leurs différences d'âge
-        st.subheader("Différence d'âge par département")
+        st.subheader("Age Difference by Department")
 
         # Option 1: Afficher en format tableau
         st.dataframe(diff_age_par_departement.rename(columns={"Diff_Age": "Différence d'âge moyenne (ans)"}))
@@ -857,7 +857,7 @@ def page_dataViz():
         color='Nombre_Mariages',  # Le nombre de mariages par département
         color_continuous_scale="Reds",  # Échelle de couleur
         labels={'Nombre_Mariages': 'Nombre de Mariages'},  # Légende
-        title='Nombre de Mariages par Département'
+        
     )
 
     # Ajuster la mise en page de la carte
@@ -871,12 +871,12 @@ def page_dataViz():
         width=1200,  # Ajuster la largeur de la carte
         margin={"r":0,"t":50,"l":0,"b":0},  # Marges pour une meilleure vue
         coloraxis_colorbar=dict(
-            title="Nombre de Mariages"
+            title="Number of Wedding"
         )
     )
 
     # Afficher la carte dans Streamlit
-    st.subheader("Carte des Mariages par Département")
+    st.subheader("Wedding by departement Map")
     st.plotly_chart(fig)
 
 
@@ -888,7 +888,7 @@ def page_dataViz():
 
 
 # Créer la barre latérale pour la navigation
-st.sidebar.title("Dash Board sur la demographie 2021")
+st.sidebar.title("Dashboard on French Demographics 2021")
 pages = {
     
     "Data visualisation": page_dataViz,
@@ -900,7 +900,7 @@ pages = {
 
 
 # Utiliser selectbox pour choisir la page
-selected_page = st.sidebar.selectbox("Sélectionnez une page", list(pages.keys()))
+selected_page = st.sidebar.selectbox("Select a page", list(pages.keys()))
 
 # Appeler la fonction de la page sélectionnée
 pages[selected_page]()
